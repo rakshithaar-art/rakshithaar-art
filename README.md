@@ -97,4 +97,75 @@ public class quicksort
 		}
 
 	}
+ public static void main(String[] args) 
+
+	{
+
+		
+
+	    Random r = new Random();
+
+	    int a[]=new int[100000],i,n;
+
+	    long start,end;
+
+	
+
+	    Scanner s1=new Scanner(System.in);
+
+	    System.out.println("Enter the number of elements:");
+
+	    n=s1.nextInt();
+
+
+
+	    System.out.println("Random elements are:");
+
+	    for(i=0;i<n;i++)
+
+	    {
+
+	    	a[i]=r.nextInt(1000);	
+
+	    }
+
+	       
+
+	    System.out.println("The array elements are:\n");
+
+	    for(i=0;i<n;i++)
+
+	    {
+
+	    	System.out.println(a[i]);
+
+	    }
+
+	
+
+	    long startTime = System.currentTimeMillis();
+
+	    q.quick(a,0,n-1);
+
+	    long endTime   = System.currentTimeMillis();
+
+	    long totalTime = endTime - startTime;
+
+
+
+	    System.out.println("\nThe sorted elements are:\n");
+
+	    for(i=0;i<n;i++)
+
+	    {
+
+	    	System.out.println(a[i]);
+
+	    }
+
+	
+
+	    System.out.println("Total Time Taken: "+totalTime+"ms");        
+
+	}
 
